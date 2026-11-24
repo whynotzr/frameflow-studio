@@ -1,4 +1,4 @@
-export interface ColorToken {
+﻿export interface ColorToken {
   id: string;
   name: string;
   value: string;
@@ -6,24 +6,12 @@ export interface ColorToken {
 
 export function exportToCssVariables(tokens: ColorToken[]): string {
   const lines = tokens.map((t) => `  --color-${t.name}: ${t.value};`);
-  return `:root {
-${lines.join("
-")}
-}`;
+  return `:root {\n${lines.join("\n")}\n}`;
 }
 
 export function exportToTailwindConfig(tokens: ColorToken[]): string {
-  const entries = tokens.map((t) => `        "${t.name}": "${t.value}",`).join("
-");
-  return `export default {
-  theme: {
-    extend: {
-      colors: {
-${entries}
-      }
-    }
-  }
-};`;
+  const entries = tokens.map((t) => `        "${t.name}": "${t.value}",`).join("\n");
+  return `export default {\n  theme: {\n    extend: {\n      colors: {\n${entries}\n      }\n    }\n  }\n};`;
 }
 
 export function exportToFigmaTokensJson(tokens: ColorToken[]): string {
