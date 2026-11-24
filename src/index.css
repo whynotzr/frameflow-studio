@@ -1,0 +1,17 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: Inter, system-ui, sans-serif; }
+body { background: #090b10; color: #f8fafc; min-height: 100vh; }
+.container { max-width: 1120px; margin: 0 auto; padding: 2.5rem 1.5rem; display: flex; flex-direction: column; gap: 2rem; }
+.header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; border-bottom: 1px solid #1f2433; padding-bottom: 1.5rem; }
+.header h1 { font-size: 1.9rem; letter-spacing: 2px; }
+.header h1 span { color: #a855f7; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+.card { background: #141824; border: 1px solid #23283b; border-radius: 14px; padding: 1.1rem; display: flex; flex-direction: column; gap: 0.75rem; }
+.swatch-bar { height: 70px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1); }
+.row { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; }
+.badge { padding: 3px 8px; border-radius: 999px; font-size: 0.75rem; font-weight: 700; }
+.badge.AAA, .badge.AA { background: rgba(34,197,94,0.15); color: #4ade80; }
+.badge.FAIL { background: rgba(239,68,68,0.15); color: #f87171; }
+.tabs { display: flex; gap: 0.5rem; }
+button { background: #1e2436; color: #f8fafc; border: 1px solid #2e364f; padding: 0.55rem 1rem; border-radius: 8px; cursor: pointer; font-weight: 600; }
+button.active, button:hover { background: #a855f7; border-color: #a855f7; }
+pre { background: #0d1018; border: 1px solid #1f2433; padding: 1.25rem; border-radius: 12px; overflow-x: auto; font-size: 0.88rem; color: #38bdf8; }
